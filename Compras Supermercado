@@ -1,0 +1,16 @@
+Proceso ComprasSupermercado
+	definir a,b,c,d,e Como Entero;
+	escribir "Cantidad producto 1";
+	leer a;
+	escribir "Cantidad producto 2";
+	leer b;
+	escribir "Cantidad producto 3";
+	leer c;
+	escribir "Cantidad producto 4";
+	leer d;
+	escribir "Cantidad producto 5";
+	leer e;
+	escribir "Su cuenta total es de:";
+	suma= a*2+b*8+c*14+d*94+e*54;
+	escribir suma;
+FinProceso
