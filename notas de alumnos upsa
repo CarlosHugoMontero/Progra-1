@@ -1,0 +1,41 @@
+// notasalumnos.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+
+using namespace std;
+
+void main ()
+{
+	float n,i,pp,sp,np,ef,nf,pf;
+	cout<<"INGRESE EL NUMERO DE ESTUDIANTES: ";
+	cin>>n;
+	for (i=1; i<=n; i++)
+	{
+		cout<<"INGRESE NOTA DEL PRIMER PARCIAL: ";
+		cin>>pp;
+		cout<<"INGRESE NOTA DEL SEGUNDO PARCIAL: ";
+		cin>>sp;
+		cout<<"INGRESE NOTA PRACTICA: ";
+		cin>>np;
+		cout<<"INGRESE NOTA DEL EXAMEN FINAL: ";
+		cin>>ef;
+		cout<<"INGRESE NUEMRO DE FALTAS: ";
+		cin>>nf;
+		if (nf>11)
+			pf=(pp*0.20+sp*0.20+np*0.20+ef*0);
+		else
+			pf=(pp*0.20+sp*0.20+np*0.20+ef*0.40);
+		cout<<"EL PROMEDIO FINAL SERA: ";
+		cout<<pf<<endl;
+		if (pf>=51)
+			cout<<"APROBADO"<<endl;
+		else
+			cout<<"REPROBADO"<<endl;
+	}
+	getch();
+}
+
+
