@@ -1,0 +1,36 @@
+// notasdowhile.cpp : Defines the entry point for the console application.
+//
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+using namespace std;
+void name ()
+{
+	int i=0;
+	float np, pp, sp, tp, ef, promedio, nf;
+	char m;
+	promedio=0;
+	do
+	{ cout<<"Escribir nota practica: ";
+		cin>>np;
+		cout<<"Escribir nota del primer parcial: ";
+		cin>>pp;
+		cout<<"Escribir nota del segundo parcial: ";
+		cin>>sp;
+		cout<<"Escribir nota del tercer parcial: ";
+		cin>>tp;
+		cout<<"Escribir nota del examen final: ";
+		cin>>ef;
+		nf=(np*0.2)+((pp+sp+tp)/3)*0.4+(0.4*ef);
+		promedio=promedio+nf;
+		cout<<"Desea continuar";
+		cin>>m;
+		i++;
+	}
+	while (m!='n');
+		promedio=promedio/i;
+	cout<<"El promedio final sera: "<<endl;
+	cout<<promedio;
+	getch();
+}
