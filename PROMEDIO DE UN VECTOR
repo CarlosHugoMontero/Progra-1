@@ -1,0 +1,56 @@
+// loquita.cpp : Defines the entry point for the console application.
+// promedio de un vector
+
+#include "stdafx.h"
+#include <iostream>
+#include "conio.h"
+#include "math.h"
+#define MAX 100
+using namespace std;
+void cargar (double vec[], int tam);
+void mostrar (double vec[], int tam);
+void promedio (double vec[], int tam);
+void main()
+{
+	int tam;
+	double vec[MAX];
+	cout<<"Ingrese el tamanho de sus vactores: ";
+	cin>>tam;
+	cargar (vec,tam);
+	mostrar (vec,tam);
+	promedio (vec,tam);
+	getch();
+
+}
+void cargar (double vec[], int tam)
+{
+	for (int i=0;i<tam; i++)
+	{
+		cout<<"vec["<<i<<"]:";
+		cin>>vec[i];
+	}
+}
+void mostrar (double vec[], int tam)
+{
+	for (int i=0;i<tam; i++)
+	{
+		cout<<"------------------------"<<endl;
+		cout<<"vec["<<i<<"]:"<<vec[i]<<endl;
+	}
+}
+
+void promedio (double vec[], int tam)
+{
+	
+	double promedi=0;
+	for (int i=0; i<tam; i++)
+	{
+		promedi=promedi+vec[i];
+	}
+	promedi=promedi/tam;
+		cout<<"El promedio sera: "<<promedi<<endl;
+	
+}
+
+
+
